@@ -3,10 +3,12 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "vmSize": {
-            "type": "string",
-            "defaultValue": "Standard_F1"
+            "type": "string"
         },
         "vmName": {
+            "type": "string"
+        },
+        "osType": {
             "type": "string"
         },
         "osDiskVhdName": {
@@ -33,7 +35,7 @@
                     "osDisk": {
                         "name": "[parameters('osDiskVhdName')]",
                         "createOption": "Attach",
-                        "osType": "Linux",
+                        "osType": "[parameters('osType')]",
                         "vhd": {
                             "uri": "[concat('https', '://', parameters('storageAccountName'), '.blob.core.windows.net', concat('/vhds/', parameters('osDiskVhdName')))]"
                         },
