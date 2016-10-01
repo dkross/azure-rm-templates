@@ -30,7 +30,7 @@
         "osDiskVhdName": {
             "type": "string",
             "metadata": {
-                "description": "Existing VHD file name"
+                "description": "New VHD file name"
             }
         },
         "storageAccountName": {
